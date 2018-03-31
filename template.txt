@@ -1,0 +1,31 @@
+** GIPHY Generator
+
+*create an array called topics that contains movies
+
+*Js should automatic.ally take topics and create buttons of them.
+A forEach loop on topics should be created.  Each iteration will
+create a button, as well as data-content attributes with the movie's name.
+They also should have still and live attributes that contain the different 
+URLs.
+
+
+*An event listener for the movie buttons div should be created (i.e. on()).
+When a movie button is clicked, an event handler function will use 
+this.attr("data-content").  An ajax call will be initiated, with q being
+equal to "data-content" and limit equal to 10.  The images will then
+be appended in movies using a div. In the div will be the gif,
+as well as object property information from the GIPHY generator web site.
+
+
+*add an .on("click") event listener for the submit button.  When pressed
+it will add the button to the movie array.  It will then call the
+the makeButton function to create buttons for all of the items in movie array.
+
+*add an .on("click") event listener for the gifs.  When they are clicked,
+a this.attr() will be used to switch out the still or animated url 
+which are already attributes.
+
+
+
+
+
