@@ -1,6 +1,5 @@
 $(document).ready(function () {
   // Two issues to work on:
-  // *formatting images in rows
   // *allowing buttons to still be used after additonal button added
 
   var apiKey = "n2x8gbuyg0EvHF3aTgfCDBsL8TEP3Oru";
@@ -71,6 +70,7 @@ $(document).ready(function () {
     image.addClass("img-thumbnail");
     div.css("text-align", "center");
     div.css("float", "right");
+    div.css("height", "200px");
     div.addClass("col-md-4");
   }
 
