@@ -48,14 +48,16 @@ $(document).ready(function () {
   })
 
   // retrieves JSON from API
-  $("button").on("click", function (event) {
+  movieButtons.on("click", "button", function (event) {
     event.preventDefault();
     searchItem = $(this).attr("data-content");
-    var queryURL = url + searchItem + "limit=10&api_key=" + apiKey;
+    console.log(searchItem);
+    var queryURL = url + searchItem + "&limit=10&api_key=" + apiKey;
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function (response) {
+      console.log(response);
       formatAndAddGIPHY(response);
     })
   });
@@ -70,7 +72,8 @@ $(document).ready(function () {
     image.addClass("img-thumbnail");
     div.css("text-align", "center");
     div.css("float", "right");
-    div.css("height", "200px");
+    div.css("height", "220px");
+    div.css("overflow", "hidden");
     div.addClass("col-md-4");
   }
 
@@ -89,7 +92,6 @@ $(document).ready(function () {
   function formatAndAddGIPHY(response) {
     // var rowDiv;
     for (var i = 1; i < 11; i++) {
-      console.log(response);
       var newDiv = $("<div>");
       var newImage = $("<img>")
       var stillGIF = response["data"][i]["images"]["fixed_width_still"]["url"];
